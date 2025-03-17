@@ -12,11 +12,13 @@ nav ul {
 }
 
 nav ul li {
+    position: relative;
     margin: 0 15px;
     padding: 10px;
 }
 
 nav ul li a {
+    position: relative;
     text-decoration: none;
     color: rgb(0, 0, 0);
     padding: 10px 15px;
@@ -26,6 +28,11 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #555;
 }
+
+.has-dropdown {
+    position: relative;
+  }
+
 .dropdown {
     display: none;
     position: absolute;
@@ -35,10 +42,13 @@ nav ul li a:hover {
     padding: 0;
     list-style: none;
     width: 150px;
+    z-index: 1000;
 }
 
 .dropdown li {
     padding: 10px;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .dropdown li a {
@@ -46,6 +56,6 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-nav ul li:hover .dropdown {
+nav ul li.has-dropdown:hover .dropdown {
     display: block;
-}
+  }
