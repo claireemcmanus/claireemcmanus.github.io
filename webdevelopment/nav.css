@@ -59,3 +59,31 @@ nav ul li a:hover {
 nav ul li.has-dropdown:hover .dropdown {
     display: block;
   }
+
+  .hamburger {
+    display: none; 
+    font-size: 30px; 
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none; 
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    
+    nav ul.active {
+        display: block; 
+    }
+
+    .has-dropdown .dropdown {
+        display: none;
+    }
+}
