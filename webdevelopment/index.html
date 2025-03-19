@@ -9,12 +9,14 @@ School/Term: Mizzou Spring 2025
 Developed: 2/16/25
 Tested: 3/16/25
 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <title>Claire McManus Portfolio</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="nav.css">
 </head>
 <nav>
+  <div class="hamburger">&#9776;</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -30,14 +32,6 @@ Tested: 3/16/25
       <li><a href=#>Contact</a></li>
     </ul>
   </nav>
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('nav ul');
-    
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); 
-    });
-</script>
 <body>
     <header>
         <h1>Home</h1>
@@ -54,4 +48,13 @@ Tested: 3/16/25
         cnmb79@umsystem.edu
         Copyright© 2025
     </footer>
-    </body>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('nav ul');
+      
+      hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active'); 
+      });
+    </script>  
+  </body>
+</html>

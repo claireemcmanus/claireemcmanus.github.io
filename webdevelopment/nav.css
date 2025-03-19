@@ -60,12 +60,11 @@ nav ul li.has-dropdown:hover .dropdown {
     display: block;
   }
 
-  .hamburger {
+.hamburger {
     display: none; 
     font-size: 30px; 
     cursor: pointer;
 }
-
 
 @media only screen and (max-width: 768px) {
     nav ul {
@@ -78,12 +77,18 @@ nav ul li.has-dropdown:hover .dropdown {
         display: block; 
     }
 
-    
     nav ul.active {
         display: block; 
     }
 
     .has-dropdown .dropdown {
         display: none;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+    .has-dropdown .dropdown {
+        display: none !important;
     }
 }

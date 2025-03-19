@@ -3,51 +3,80 @@
 <head>
 <!--
 Title: About Me Page
-Use: Display my accomplishments and experience
+Use: Personal and professional information
 Author: Claire McManus
 School/Term: Mizzou Spring 2025
 Developed: 2/16/25
-Tested: 3/16/25
+Tested: 3/19/25
 -->
 <meta charset="utf-8">
-<title>Claire McManus Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Claire McManus</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-    <header>
-        <h1>About</h1>
-    </header>
-    
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="has-dropdown">
+<nav>
+    <div class="hamburger">&#9776;</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
             <a href="#">Projects</a>
             <ul class="dropdown">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
             </ul>
-          </li>
-          <li><a href="reflection.html">Reflection</a></li>
-          <li><a href=#>Contact</a></li>
-        </ul>
-      </nav>
+        </li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-    <main>
-        <p>I am from St. Louis, Missouri and I went to Cor Jesu Academy. I am currently on the second semester of my sophomore year at the University of Missouri. I am working towards a Bachelor of Science in Information Technology at the College of Engineering. I am on the path to obtain certificates in Cybersecurity, Web and App Development, Information Systems and Technology, and Media Technology and Design. I am sufficient in Python, HTML, C#, and C++. I also have experience with Microsoft office and Adobe Creative Cloud. I have made the High Dean’s List 3/3 semesters in the College of Engineering. I am expected to graduate in May of 2027.</p>
-        <p>Cor Jesu Academy <em>August 2019-May 2023</em></p>
-        <p>University of Missouri- Columbia <em>August 2023-May 2027</em></p>
-        <blockquote>"Success is not final, failure is not fatal: It is the courage to continue that counts." — Winston Churchill</blockquote>
-        <a href="Resume.pdf" class="resume">My Resume</a>
-    </main>
+<header class="about-header">
+    <div class="header-content">
+        <h1>ABOUT</h1>
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Claire McManus">
+        </div>
+    </div>
+</header>
 
-    <footer>
-        Claire McManus
-        cnmb79@umsystem.edu
-        Copyright© 2025
-    </footer>
+<main>
+    <section class="bio-section">
+        <p>I am from St. Louis, Missouri and I went to Cor Jesu Academy. I am currently on the second semester of my sophomore year at the University of Missouri. I am working towards a Bachelor of Science in Information Technology at the College of Engineering. I am on the path to obtain certificates in Cybersecurity, Web and App Development, Information Systems and Technology, and Media Technology and Design.</p>
+    </section>
+
+    <section class="content-grid">
+        <div class="video-container">
+            <h2>Powtoon Video</h2>
+        </div>
+        <div class="quote-skills">
+            <blockquote>
+                <p>"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
+                <cite>— Winston Churchill</cite>
+            </blockquote>
+            
+            <div class="skills">
+                <p>I am proficient in Python, HTML, C#, and C++. I also have experience with Microsoft office and Adobe Creative Cloud. I have made the High Dean's List 3 semesters in the College of Engineering. I am expected to graduate in May of 2027.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Claire McManus
+    cnmb79@umsystem.edu
+    Copyright© 2025
+</footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('nav ul');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
 </body>
 </html>
