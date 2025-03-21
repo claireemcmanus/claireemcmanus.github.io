@@ -1,6 +1,6 @@
 
 nav {
-    background-color: #e8bad6; 
+    background-color: #ffd1e0; 
     padding: 10px;
 }
 
@@ -38,7 +38,7 @@ nav ul li a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #e8bad6;
+    background-color: #ffd1e0;
     padding: 0;
     list-style: none;
     width: 150px;

@@ -9,19 +9,20 @@
         Developed: 3/4/25
         Tested: 3/16/25
     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Projects</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     </head>
     <body>
-        <header></header>
         <nav>
+          <div class="hamburger">&#9776;</div>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li class="has-dropdown">
-                <a href="#">Projects</a>
+                <a href="projects.html">Projects</a>
                 <ul class="dropdown">
                   <li><a href="#">Link 1</a></li>
                   <li><a href="#">Link 2</a></li>
@@ -33,8 +34,26 @@
             </ul>
           </nav>
 
-        <main></main>
-
+          <main>
+            <div class="projects-container">
+              <h1>PR</h1>
+              <a href="#" target="_blank">Python <br>+ HTML</a>
+              <h1>EC</h1>
+              <a href="#" target="_blank">Media <br>Design</a>
+              <a href="#" target="_blank"> </a>
+              <h1>OJ</h1>
+              <a href="#" target="_blank">C#</a>
+              <h1>TS</h1>
+              
+            </div>
+          </main>
+            <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('nav ul');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            </script>
             <footer>
             Claire McManus
             cnmb79@umsystem.edu

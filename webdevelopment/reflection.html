@@ -9,21 +9,21 @@
         Developed: 3/16/25
         Tested: 3/16/25
     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Reflection</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header>
-            <h1>Reflection</h1>
-        </header>
         <nav>
+            <div class="hamburger">&#9776;</div>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li class="has-dropdown">
-                <a href="#">Projects</a>
+                <a href="projects.html">Projects</a>
                 <ul class="dropdown">
                   <li><a href="#">Link 1</a></li>
                   <li><a href="#">Link 2</a></li>
@@ -36,6 +36,13 @@
           </nav>
 
         <main>
+            <div class="reflection-header">
+            <h1>REF<br>FLEC<br>TION</h1>
+           
+
+            <div class="circle_picture">
+                <img src="nature.jpg"></div>
+            </div>
             <div class="reflection">
                 <p>At Mizzou, I am working on expanding my knowledge of Information Technology and finding my true passion. I have taken many different types of classes that has helped me to determine what I see myself doing in the future. My love for continuous learning pushes me to keep working hard and trying my best with everything I do. 
 
@@ -50,7 +57,13 @@
                 </p>
             </div>
         </main>
-
+            <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('nav ul');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            </script>
             <footer>
             Claire McManus
             cnmb79@umsystem.edu
