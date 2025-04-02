@@ -15,24 +15,26 @@ Tested: 3/16/25
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="nav.css">
 </head>
-<nav>
-  <div class="hamburger">&#9776;</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="has-dropdown">
-        <a href="projects.html">Projects</a>
-        <ul class="dropdown">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </li>
-      <li><a href="reflection.html">Reflection</a></li>
-      <li><a href=#>Contact</a></li>
-    </ul>
-  </nav>
 <body>
+  <nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
+        <li><a href="reflection.html">Reflection</a></li>
+        <li><a href=#>Contact</a></li>
+      </ul>
+  </nav>
+
     <div class="container">
           <h1 class="name">Claire<br>McManus</h1>
           <p class="subtitle">Sophomore IT student at<br>the University Of Missouri</p>
@@ -42,8 +44,6 @@ Tested: 3/16/25
         <div class="pixel-box-2"></div>
         <img src="Home_profile.jpg" alt="Claire McManus">
     </div>
-</div>
-</div>
     <main>
         <div class="main_description">
         <h1>Website Purpose</h1>
@@ -55,13 +55,5 @@ Tested: 3/16/25
         cnmb79@umsystem.edu
         Copyright© 2025
     </footer>
-    <script>
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('nav ul');
-      
-      hamburger.addEventListener('click', () => {
-          navLinks.classList.toggle('active'); 
-      });
-    </script>  
   </body>
 </html>

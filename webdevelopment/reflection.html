@@ -18,7 +18,8 @@
     </head>
     <body>
         <nav>
-            <div class="hamburger">&#9776;</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
@@ -57,13 +58,7 @@
                 </p>
             </div>
         </main>
-            <script>
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('nav ul');
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-            </script>
+            
             <footer>
             Claire McManus
             cnmb79@umsystem.edu
