@@ -231,6 +231,29 @@ body {
   text-decoration: underline;
 }
 
+/*footer*/
+footer {
+  position: relative;
+  background-image: url("images/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+footer p {
+  position: relative;
+  z-index: 2; 
+}
+.footer-icons {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons:hover {
+  transform: scale(1.2);
+}
+
 @media only screen and (max-width: 768px) {
   header {
     font-size: 1.5em;
