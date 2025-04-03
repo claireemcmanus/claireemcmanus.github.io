@@ -8,6 +8,9 @@
   left: 0;
   z-index: 3;
 }
+h1 {
+  font-family: 'Playfair Display', serif;
+}
 
 .pixel-box-2 {
   position: absolute;
@@ -300,3 +303,67 @@ footer p {
     transform: scale(1.2);
   }
 }
+@media print {
+  /* Set print margins to 1 inch */
+  body {
+      color: black;
+      font-family: "Times New Roman", Times, serif; /* Default serif font */
+      margin: 1in; /* 1-inch margins on all sides */
+      line-height: 1.2; /* Reduce line spacing to fit content */
+  }
+
+  /* Apply custom font to H1 */
+  h1 {
+      font-family: 'Playfair Display', serif; /* Custom font */
+      font-size: 10pt; /* Reduce size slightly */
+      text-align: center;
+      margin-bottom: 5px;
+  }
+
+  /* Paragraph styling */
+  p {
+      font-size: 10pt; /* Slightly smaller text */
+      text-align: justify;
+      margin-bottom: 5px;
+  }
+
+  /* Education list (ul or ol) */
+  ul, ol {
+      font-size: 10pt;
+      margin: 0;
+      padding-left: 15px; /* Reduce padding */
+  }
+
+  /* Blockquote styling */
+  blockquote {
+      font-size: 12pt; /* Adjusted for better spacing */
+      font-style: italic;
+      text-align: center;
+      margin: 5px 0;
+  }
+
+  /* Footer (contact info, no logos or icons) */
+  footer {
+      font-size: 9pt; /* Smaller to save space */
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  /* Hide images, icons, unnecessary elements */
+  img, .footer-icons {
+      display: none;
+  }
+
+  /* Adjust spacing to fit within a single page */
+  h1, p, blockquote, ul, ol, footer {
+      page-break-inside: avoid;
+  }
+
+  /* Reduce extra whitespace */
+  * {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+
