@@ -1,26 +1,8 @@
 /*Home*/
-.pixel-box-1 {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-color: #fbd7e7;
-  top: 40px;
-  left: 0;
-  z-index: 3;
-}
 h1 {
   font-family: 'Playfair Display', serif;
 }
 
-.pixel-box-2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #fbd7e7;
-  bottom: 0;
-  right: 0;
-  z-index: 3;
-}
 .video-container iframe {
   max-width: 100%;
   height: auto;
