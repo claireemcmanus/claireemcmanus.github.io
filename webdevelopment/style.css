@@ -249,6 +249,9 @@ footer p {
 .footer-icons:hover {
   transform: scale(1.2);
 }
+.print-footer{
+  display: none !important;
+}
 
 @media only screen and (max-width: 768px) {
   header {
@@ -302,6 +305,8 @@ footer p {
   .footer-icons:hover {
     transform: scale(1.2);
   }
+  
+  
 }
 @media print {
   body {
@@ -347,7 +352,7 @@ footer p {
   }
   
   iframe, nav, footer, img, 
-  .photo-container, .footer-icons, 
+  .photo-container, .regular-footer, .footer-icons, 
   .profile-image, input#menu-toggle, 
   label.hamburger {
       display: none !important;
