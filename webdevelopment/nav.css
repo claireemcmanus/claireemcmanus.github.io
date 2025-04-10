@@ -28,10 +28,22 @@ nav ul li a:hover {
     background-color: #555;
     color: white;
 }
-
-.dropdown {
+nav ul li.has-dropdown {
+    position: relative;
+  }
+  
+  nav ul li.has-dropdown ul.dropdown {
     display: none;
-}
+    position: absolute;
+    top: 100%;       
+    background-color: #555; 
+    padding: 10px;        
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 100;         
+  }
+  nav ul li.has-dropdown:hover ul.dropdown {
+    display: block;
+  }
 
 .hamburger {
     display: none;

@@ -307,10 +307,9 @@ footer p {
   
 }
 @media print {
-  /* Hide unwanted elements */
   nav,
   .profile-image,
-  .regular-footer, /* This hides the footer image background area */
+  .regular-footer, 
   .resume-image,
   .projects-container,
   .footer-icon-container,
@@ -318,13 +317,11 @@ footer p {
     display: none !important;
   }
   
-  /* Remove background from the about header so only the text shows */
   .about-header {
     background: none !important; 
     background-color: transparent !important;
   }
   
-  /* Style the header text in the about section */
   .about-header .header-content h1 {
     display: block !important;
     font-size: 12pt !important;
@@ -335,7 +332,6 @@ footer p {
     padding: -100px !important;
   }
   
-  /* Display the description area */
   .bio-section {
     display: block !important;
     font-size: 10pt !important;
