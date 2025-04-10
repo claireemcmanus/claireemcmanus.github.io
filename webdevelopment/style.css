@@ -252,6 +252,28 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
+  #menu-toggle:checked + label + ul {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;  
+    position: absolute;    
+    top: 100%;            
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  
+  label.hamburger {
+    cursor: pointer;
+    font-size: 2rem;
+    display: inline-block;
+  }
   header {
     font-size: 1.5em;
     text-align: center;
@@ -274,12 +296,44 @@ footer p {
   .about-header h1 {
     font-size: 4rem;
   }
+  .name {
+    font-size: 7rem;
+    margin-left:-200px;
+  }
+  .subtitle{
+    font-size: 2rem;
+    margin-left:-200px;
+  }
 
   .profile-image {
     width: 200px;
     height: 200px;
   }
+  .container{
+    width: 200px;
+    height: 200px;
+  }
+  .photo-container{
+    width: 200px;
+    height: 200px;
+    display: flex;
 
+  }
+  .main_description{
+    margin-top: 1000px;
+    font-size: 1rem;
+    
+  }
+  .projects-container h1{
+    font-size: 3rem;
+    margin-left: -100px;
+    font-display: flex;
+  }
+
+  .projects-container a{
+    font-size: 2rem;
+    margin-left: -100px;
+  }
   .content-grid {
     grid-template-columns: 1fr;
   }
