@@ -7,37 +7,32 @@ h1 {
   max-width: 100%;
   height: auto;
 }
-.photo-container {
-  position: absolute;
-  right: 30px;
-  top: 150px;
-  width: 370px;
-  height: 550px;
-  overflow: hidden;
-  margin-top: -70px;
-}
 
 .photo-container img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
+  display: flex;
+  overflow: hidden;
+  margin-top: -1650px;
+  margin-left: 220px;
 }
 
 .container {
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 250px;
+  z-index: 1;
 }
 
 .name {
   color: #ef476b;
   font-family: 'Playfair Display', serif;
-  font-size: 8rem;
+  font-size: 10rem;
   line-height: 0.9;
   margin-bottom: 10px;
   position: relative;
-  z-index: 2;
 }
 
 .subtitle {
@@ -53,6 +48,7 @@ h1 {
   color: #ef476b;
   font-family: 'Playfair Display', serif;
   text-align: center;
+  margin-top: -800px;
 }
 
 .main_description p {
@@ -119,7 +115,7 @@ body {
 
 .about-header {
   position: relative;
-  background-color: #888888;
+  background-image: url(images/about-background.jpg);
   height: 400px;
   display: flex;
   justify-content: center;
@@ -175,7 +171,17 @@ body {
     padding: 0 20px;
 }
 
+.resume-image {
+  align-items: center;
+  background-color: white;
+  max-width: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-left: 560px;
 
+
+}
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -190,6 +196,7 @@ body {
   color: #EF476B;
   margin-bottom: 50px;
   margin-top: 50px;
+  overflow: hidden;
   transform: scaleY(1.5);
   line-height: 0.8;
 }
@@ -223,8 +230,17 @@ footer p {
   position: relative;
   z-index: 2; 
 }
+.regular-footer {
+  background-image: url("images/footer-bg.png");
+}
+.footer-icon-container {
+  position: absolute;      
+  bottom: 300px;             
+  left: 46%;      
+  display: flex;             
+  gap: 20px;
+}
 .footer-icons {
-  position: relative;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -291,58 +307,60 @@ footer p {
   
 }
 @media print {
-  body {
-      color: black;
-      font-family: Arial, sans-serif;
-      margin: 1in;
+  /* Hide unwanted elements */
+  nav,
+  .profile-image,
+  .regular-footer, /* This hides the footer image background area */
+  .resume-image,
+  .projects-container,
+  .footer-icon-container,
+  main iframe {
+    display: none !important;
   }
   
-  .about-header, .header-content {
-      position: static;
-      margin: 0;
-      padding: 0;
+  /* Remove background from the about header so only the text shows */
+  .about-header {
+    background: none !important; 
+    background-color: transparent !important;
   }
   
+  /* Style the header text in the about section */
   .about-header .header-content h1 {
-      font-size: 12pt;
-      font-family: Arial, sans-serif;
-      color: black;
-      text-align: left;
-      margin-bottom: 20px;
-      padding: 0;
+    display: block !important;
+    font-size: 12pt !important;
+    font-family: Arial, sans-serif !important;
+    color: black !important;
+    text-align: left !important;
+    margin: -100px !important;
+    padding: -100px !important;
   }
   
-  main {
-      font-size: 10pt;
-      text-align: justify;
-      font-family: Arial, sans-serif;
-      color: black;
-      margin: 0;
-      padding-top: 10px;
+  /* Display the description area */
+  .bio-section {
+    display: block !important;
+    font-size: 10pt !important;
+    font-family: Arial, sans-serif !important;
+    color: black !important;
+    margin-top: -200px;
+  }
+  footer {
+    background: none !important; 
+  }
+  body{
+    background: none !important; 
   }
   
-  .content-grid {
-      display: block;
-      margin-top: 10px;
+  .print-footer {
+    display: block !important;
+    position: flex;
+    text-align: center !important;
+    font-size: 12pt !important;
+    color: black !important;
+    background: none !important; 
+    page-break-after: avoid;
   }
   
-  blockquote {
-      font-size: 11pt;
-      font-style: italic;
-      text-align: center;
-      margin: 15px 0;
-  }
-  
-  iframe, nav, footer, img, 
-  .photo-container, .regular-footer, .footer-icons, 
-  .profile-image, input#menu-toggle, 
-  label.hamburger {
-      display: none !important;
-  }
-  
-  .bio-section, .quote-skills, .skills {
-      display: block;
-      margin: 10px 0;
-      page-break-inside: avoid;
+  html, body {
+    page-break-after: avoid;
   }
 }
