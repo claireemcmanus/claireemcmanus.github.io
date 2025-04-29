@@ -1,10 +1,14 @@
 nav {
-    background-color: #ffd1e0; 
+    background-color: #ffebf4; 
     padding: 10px;
     position: relative;
+    border: 2px solid #000000; 
 }
 
 nav ul {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    font-size: 1.2rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -19,13 +23,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
     color: black;
     padding: 10px 15px;
     display: block;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #fabcd1;
     color: white;
 }
 nav ul li.has-dropdown {
@@ -36,7 +41,7 @@ nav ul li.has-dropdown {
     display: none;
     position: absolute;
     top: 100%;       
-    background-color: #555; 
+    background-color: #fabcd1; 
     padding: 10px;        
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     z-index: 100;         

@@ -1,3 +1,17 @@
+body {
+  background-color: #ffebf4;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 /*Home*/
 h1 {
   font-family: 'Playfair Display', serif;
@@ -7,69 +21,98 @@ h1 {
   max-width: 100%;
   height: auto;
 }
-
-.photo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-  display: flex;
-  overflow: hidden;
-  margin-top: -1650px;
-  margin-left: 220px;
-}
-
-.container {
-  margin-bottom: 200px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 250px;
-  z-index: 1;
-}
-
-.name {
-  color: #ef476b;
-  font-family: 'Playfair Display', serif;
-  font-size: 10rem;
-  line-height: 0.9;
-  margin-bottom: 10px;
+.home-hero {
   position: relative;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 0px; 
+  margin-top: 100px;
 }
 
-.subtitle {
-  color: #ef476b;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
+.text-container {
   position: relative;
   z-index: 2;
 }
 
-.main_description h1{
-  color: #ef476b;
+.name {
+  color: #EF476B;
   font-family: 'Playfair Display', serif;
-  text-align: center;
-  margin-top: -800px;
+  font-size: 10rem;
+  line-height: 0.9;
 }
 
-.main_description p {
-  text-align: center;
+.subtitle {
+  color: #EF476B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  padding: -20px;
+  margin-top: 0px;
+}
+.photo-container {
+  position: relative;
+}
+.photo-container img {
+  width: 500px; 
+  height: auto;
+  position: relative;
+  object-fit: cover;
+  left: -50px;
+  z-index: 1;
 }
 
-.resume {
+.main-description-section {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 100px; 
+  margin: 50px 10px;
+  padding: 20px 20%;
+  margin-top: 10%;
+}
+
+.purpose-title {
+  font-size: 7rem; 
+  color: #EF476B;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.main_description-box {
+  border: 1px solid black;
+  width: fit-content;
+  text-align: center;
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+
+/*About*/
+.resume-button {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #575757;
-  color: white;
+  padding: 12px 24px;
+  background-color: #f6cbde;
+  color: #EF476B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
   text-decoration: none;
-  border: 2px solid #797979;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+    /*resume*/
+.resume-button:hover {
+  background-color: #fabcd1; 
+  color: #ffffff;
+}
+.resume-button-container {
+  text-align: center; 
+  margin: 40px 0; 
 }
 
-.resume:hover {
-  background-color: #636363;
-}
-
+/*Reflection*/
 .reflection-header{
   align-items: center;
   display: flex;
@@ -105,13 +148,7 @@ h1 {
   text-align: center;
 }
 
-body {
-  background-color: #ffd1e0;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
+
 
 .about-header {
   position: relative;
@@ -136,7 +173,7 @@ body {
   font-size: 8rem;
   font-family: 'Playfair Display', serif;
   transform: scaleY(1.5);
-  color: #e84a7f;
+  color: #EF476B;
   margin: 0;
   text-align: center;
   font-weight: 700;
@@ -171,23 +208,14 @@ body {
     padding: 0 20px;
 }
 
-.resume-image {
-  align-items: center;
-  background-color: white;
-  max-width: 600px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  margin-left: 560px;
-
-
-}
+/*Projects*/
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
   gap: 10px;
+  margin-bottom: 500px;
 }
 
 .projects-container h1 {
@@ -216,40 +244,78 @@ body {
   text-decoration: underline;
 }
 
-/*footer*/
-footer {
-  position: relative;
-  background-image: url("images/footer-bg.png");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+.project-descriptions{
+  padding-left: 200px;
+  align-items: center;
+  border: 2px solid #000000; 
+  
+}
+.projects-content{
+  display: flex;
+  gap: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.project-descriptions h2{
+
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+.project-descriptions h3{
+
+  font-size: 2rem;
+  color: #EF476B;
+  font-family: 'Playfair Display', serif;
+}
+.project-descriptions p{
+  font-size: 1.6rem;
+  color: black;
   text-align: center;
-  color: white;
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  border: 2px solid #e8bad6;
+  padding: 20px;
+  border-radius: 8px;
+
 }
-footer p {
-  position: relative;
-  z-index: 2; 
-}
-.regular-footer {
-  background-image: url("images/footer-bg.png");
-}
-.footer-icon-container {
-  position: absolute;      
-  bottom: 300px;             
-  left: 46%;      
-  display: flex;             
-  gap: 20px;
-}
-.footer-icons {
-  transition: transform 0.3s ease-in-out;
+.project-screenshot{
+  width: 70%;
+  height: 70%;
 }
 
-.footer-icons:hover {
+
+/*footer*/
+.footer-bar {
+  background-image: url("images/footer-bg.png"); 
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  min-height: 200px;
+}
+
+.footer-bar p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
+.footer-icon {
+  width: 20px; 
+  height: 20px;
+  vertical-align: middle;
+}
+
+.footer-icon:hover {
   transform: scale(1.2);
 }
-.print-footer{
-  display: none !important;
-}
+
+
+/*contact form*/
 .contact-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -300,6 +366,12 @@ textarea.form-control {
 .btn-submit:hover {
   background-color: #45a049;
 }
+
+/*Table*/
+.table-box{
+  display: flex;
+  justify-content: center;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -317,7 +389,7 @@ tbody tr:last-child {
 }
 
 th, td {
-  padding: 12px;
+  padding: 20px;
   text-align: left;
   border: 1px solid #aaa;
 }
@@ -336,50 +408,92 @@ figcaption {
   font-size: 1.2em;
   text-align: left;
 }
+.table-container {
+  width: 50%; 
+  overflow-x: auto; 
+}
 
-@media screen and (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-    width: 100%;
+/*Responsive table in mobile view*/
+@media (max-width: 600px) {
+  .table-container {
+    width: 90%; 
   }
 
-  thead {
-    display: none;
+  th, td {
+    font-size: 0.9rem; 
+    padding: 6px;
+  }
+}
+
+/*Responsive contact form in mobile*/
+@media (max-width: 600px) {
+  .contact-form {
+    width: 90%; 
+    padding: 20px;
+  }
+}
+
+/*Responsive layout for index page on mobile*/
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  tbody tr {
-    margin-bottom: 20px;
-    border: 2px solid #ccc;
+  .text-container {
+    align-items: center;
+  }
+
+  .name {
+    font-size: 4rem;
+    text-align: center;
+    padding-left: 20%;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .photo-container img {
+    width: 200px; 
+    margin-top: 20px;
+    margin-left: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+  .main-description-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .purpose-title {
+    font-size: 3rem; 
+  }
+
+  .main_description-box {
+    width: 50%;
+    font-size: 40%;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bar p {
+    font-size: 0.9rem;
     padding: 10px;
   }
 
-  td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    padding-right: 10px;
-    font-weight: bold;
-    text-align: left;
+  .footer-icon {
+    width: 20px;
+    height: 20px;
   }
 }
-@media screen and (max-width: 768px) {
-  .contact-container {
-      padding: 0.5rem;
-  }
-  
-  .contact-form {
-      padding: 1rem;
-  }
-}
-
-
 @media only screen and (max-width: 768px) {
   #menu-toggle:checked + label + ul {
     display: block;
@@ -489,6 +603,8 @@ figcaption {
   
   
 }
+
+/*Print View*/
 @media print {
   nav,
   .profile-image,
